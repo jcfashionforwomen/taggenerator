@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.top-line {
+      height: 8px;
+      width: 100%;
+      background-color: #000; /* Dark Blue */
+      margin-bottom: 1px;
+    }
+    .middle-line {
+      height: 0.5px;
+      width: 100%;
+      background-color: #000; /* Dark Blue */
+      margin-bottom: 1px;
+    }
+#tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 210mm; /* A4 width */
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.tag {
+  width: 50mm;
+  height: 85mm;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  margin: 1mm;
+  padding: 4px;
+  font-size: 9px;
+  position: relative;
+  page-break-inside: avoid;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tag .header {
+  background-color: black;
+  height: 3px;
+  width: 100%;
+  margin-bottom: 1px;
+}
+
+.barcode-container {
+  margin-top: 5px;
+  text-align: center;
+}
+.product-info {
+      font-size: 9px;
+      line-height: 1.4;
+    }
+
+    .product-left {
+      float: left;
+      width: 50%;
+    }
+
+    .product-right {
+      float: right;
+      width: 48%;
+      text-align: left;
+    }
+
+canvas,
+svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.page-break {
+  flex-basis: 100%;
+  height: 0;
+  page-break-after: always;
+}
+.barcode-container {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.barcode-container svg {
+  display: inline-block !important;
+  margin: 0 auto;
+}
+.recycle {
+      font-size: 18px;
+      margin-top: 1px;
+    }
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .tag {
+    page-break-inside: avoid;
+  }
+
+  #tagContainer {
+    page-break-after: always;
+  }
+
+  .page-break {
+    display: block;
+    page-break-before: always;
+  }
+}

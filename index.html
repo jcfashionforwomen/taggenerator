@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- favicon -->
+    <link rel="icon" href="https://lh3.googleusercontent.com/a/ACg8ocKDOdNcjUMbB_xGsiedFpTSHeKid9YHn04B8U2fMayphgRAiKQ=s288-c-no" type="image/gif" sizes="16x16">
+  <title>JC - Garment Tag Generator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Meta for proper scaling on screen & print -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h1 style="text-align:center;">JC Fashion For Women <br>Garment Tag Generator</h1>
+  
+  <div style="text-align:center; margin-bottom: 10px;">
+    <input type="file" id="excelFile" accept=".xlsx">
+    <button onclick="generatePDF()">Download PDF</button>
+  </div>
+
+  <div id="tagContainer"></div>
+
+  <!-- External Libraries -->
+  <script src="lib/xlsx.full.min.js"></script>
+  <script src="lib/html2pdf.bundle.min.js"></script>
+  <script src="lib/JsBarcode.all.min.js"></script>
+  
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
