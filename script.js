@@ -34,7 +34,8 @@ function displayTags(data) {
       <div class="product-left">
       <strong>${item['Product Name']}</strong> <br> <strong>${item['Code']}<br></strong></div>
       <div class="product-right">Art No: ${item['Art No']}<br>
-      Net Qty: 1</div>
+${item['Qty'] ? `Net Qty: ${item['Qty']}` : ''}</div>
+
       
 
       <div class="barcode-container">
