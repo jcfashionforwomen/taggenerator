@@ -59,13 +59,14 @@ function displayTags(data) {
     container.appendChild(tag);
 
     JsBarcode(`#${barcodeId}`, item['Barcode'] || item['Code'] || '0000000000', {
-      format: 'EAN13',
-    lineColor: "#000",
-    width: 1,
-      height: 30,
-      fontSize: 10,
-      displayValue: true
-    });
+  format: 'CODE128',
+  lineColor: "#000",
+  width: 1,
+  height: 30,
+  fontSize: 10,
+  displayValue: true
+});
+
 
     // Add page break after every 16 tags (4x4 grid)
     if ((index + 1) % 12 === 0) {
